@@ -1,17 +1,19 @@
 # Simple Todo App
 
-Give a brief description of the project here. Feel free to give it a different name.
+simple todo website
 
 ## Functionality
 
-Give a more detailed explanation of the project and its functionality.
+This site had to ablilty to add and delete tasks or reminders.
 
 ## Technology
 
-Give a description of the technologies and techniques used. Pictures, GIFs, or screenshots that detail the project features are recommended.
+HTML
+CSS
+JAVA SCRIPT
 
 ## Deployment
 
 This project is deployed on GitHub Pages:
 
-- ADD LINK HERE
+[Website Link](https://theodore-shellman.github.io/Theodore-Shellman-se_project_todo-app/)
