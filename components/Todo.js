@@ -5,9 +5,7 @@ class Todo {
   }
   _setDueDate() {
     this._dueDate = new Date(this._data.date);
-    console.log(this._dueDate);
     if (!isNaN(this._dueDate)) {
-        console.log("something")
       this._todoDate.textContent = `Due: ${this._dueDate.toLocaleString(
         "en-US",
         {
@@ -24,7 +22,6 @@ class Todo {
       this._todoElement.remove();
     });
     this._todoCheckboxEl.addEventListener("change", () => {
-      console.log(this._data.completed);
       this._data.completed = !this._data.completed;
     });
   }
