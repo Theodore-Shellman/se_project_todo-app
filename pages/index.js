@@ -7,7 +7,7 @@ import PopupWithForm from "../components/PopupWithForm.js";
 
 const addTodoButton = document.querySelector(".button_action_add");
 const addTodoPopupEl = document.querySelector("#add-todo-popup");
-const addTodoForm = document.querySelector["add-todo-form"];
+const addTodoForm = document.querySelector("#add-todo-form");
 const addTodoCloseBtn = addTodoPopupEl.querySelector(".popup__close");
 const todosList = document.querySelector(".todos__list");
 
@@ -50,6 +50,7 @@ const renderTodo = (item) => {
 
 addTodoForm.addEventListener("submit", (evt) => {
   evt.preventDefault();
+  console.log(addTodoForm);
   const name = evt.target.name.value;
   const dateInput = evt.target.date.value;
 
