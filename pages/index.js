@@ -36,6 +36,11 @@ const generateTodo = (data) => {
 
   return todoElement;
 };
+function handleEscapeClose(evt) {
+  if (evt.key === "Escape") {
+    addTodoPopup.close();
+  }
+}
 
 addTodoButton.addEventListener("click", () => {
   addTodoPopup.open();
@@ -44,6 +49,7 @@ addTodoButton.addEventListener("click", () => {
 // addTodoCloseBtn.addEventListener("click", () => {
 //   addTodoPopup.close();
 // });
+
 
 const renderTodo = (item) => {
   const todo = generateTodo(item);
