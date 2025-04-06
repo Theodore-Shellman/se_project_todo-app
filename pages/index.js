@@ -68,19 +68,7 @@ const renderTodo = (item) => {
   todosList.append(todo);
 };
 
-// addTodoForm.addEventListener("submit", (evt) => {
-//   evt.preventDefault();
-//   console.log(addTodoForm);
-//   const name = evt.target.name.value;
-//   const dateInput = evt.target.date.value;
 
-//   const date = new Date(dateInput);
-//   date.setMinutes(date.getMinutes() + date.getTimezoneOffset());
-//   const id = uuidv4();
-//   const values = { name, date, id };
-
-//   renderTodo(values);
-//   addTodoPopup.close();
 
 // });
 section.renderItems();
