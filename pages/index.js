@@ -13,10 +13,12 @@ const todosList = document.querySelector(".todos__list");
 
 const addTodoPopup = new PopupWithForm({
   popupSelector: "#add-todo-popup",
-  handleFormSubmit: (evt) => {
-    console.log("in index.js");
-    const name = evt.target.name.value;
-  const dateInput = evt.target.date.value;
+  handleFormSubmit: (inputValues) => {
+
+
+    
+  const name = inputValues.name;
+  const dateInput = inputValues.date;
 
   const date = new Date(dateInput);
   date.setMinutes(date.getMinutes() + date.getTimezoneOffset());
