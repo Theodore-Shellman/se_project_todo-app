@@ -44,16 +44,11 @@ addTodoPopup.setEventListener();
 const section = new Section({
   items: initialTodos,
   renderer: (item) => {
-    const todo = generateTodo(item);
-    todosList.append(todo);
+    renderTodo(item);
   },
 
   containerSelector: ".todos__list",
 });
-
-const closeModal = (modal) => {
-  modal.classList.remove("popup_visible");
-};
 
 const generateTodo = (data) => {
   const todo = new Todo(data, "#todo-template", handleCheck, handleDelete);
@@ -61,26 +56,16 @@ const generateTodo = (data) => {
 
   return todoElement;
 };
-function handleEscapeClose(evt) {
-  if (evt.key === "Escape") {
-    addTodoPopup.close();
-  }
-}
 
 addTodoButton.addEventListener("click", () => {
   addTodoPopup.open();
 });
 
-// addTodoCloseBtn.addEventListener("click", () => {
-//   addTodoPopup.close();
-// });
-
 const renderTodo = (item) => {
   const todo = generateTodo(item);
-  todosList.append(todo);
+  section.addItem(todo);
 };
 
-// });
 section.renderItems();
 
 const newTodoValidator = new FormValidator(validationConfig, addTodoForm);

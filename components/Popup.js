@@ -3,19 +3,14 @@ class Popup {
     this._popupElement = document.querySelector(popupSelector);
     this._popupCloseBtn = this._popupElement.querySelector(".popup__close");
 
-    console.log(this._popupElement)
+    console.log(this._popupElement);
   }
 
-  
-
-_handleEscClose(evt) {
-  
+  _handleEscClose(evt) {
     if (evt.key === "Escape") {
       this.close();
-      
     }
   }
-  
 
   open() {
     this._popupElement.classList.add("popup_visible");
@@ -24,12 +19,11 @@ _handleEscClose(evt) {
   close() {
     this._popupElement.classList.remove("popup_visible");
 
-    document.removeEventListener("keydown", (evt) => this._handleEscClose(evt));
+    document.removeEventListener("keydown", this._handleEscClose);
   }
-  
+
   setEventListener() {
     this._popupCloseBtn.addEventListener("click", () => {
-      
       this.close();
     });
     this._popupElement.addEventListener("mousedown", (evt) => {
