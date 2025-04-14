@@ -6,15 +6,15 @@ class Popup {
     console.log(this._popupElement);
   }
 
-  _handleEscClose(evt) {
+  _handleEscClose = (evt) => {
     if (evt.key === "Escape") {
       this.close();
     }
-  }
+  };
 
   open() {
     this._popupElement.classList.add("popup_visible");
-    document.addEventListener("keydown", (evt) => this._handleEscClose(evt));
+    document.addEventListener("keydown", this._handleEscClose);
   }
   close() {
     this._popupElement.classList.remove("popup_visible");
